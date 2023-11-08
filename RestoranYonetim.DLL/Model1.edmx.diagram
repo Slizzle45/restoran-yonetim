@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="382b6871d7f44fcd8031045ba1e3e14e" Name="Diagram1">
+        <EntityTypeShape EntityType="RestoranYonetimDBModel.Masalar" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestoranYonetimDBModel.Odemeler" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestoranYonetimDBModel.Rezervasyonlar" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestoranYonetimDBModel.Siparisler" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestoranYonetimDBModel.SiparisUrun" Width="1.5" PointX="6" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestoranYonetimDBModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestoranYonetimDBModel.Urunler" Width="1.5" PointX="3.75" PointY="9.125" IsExpanded="true" />
+        <AssociationConnector Association="RestoranYonetimDBModel.FK_Rezervasyonlar_Masalar" ManuallyRouted="false" />
+        <AssociationConnector Association="RestoranYonetimDBModel.FK_Odemeler_Siparisler" ManuallyRouted="false" />
+        <AssociationConnector Association="RestoranYonetimDBModel.FK__SiparisUr__Sipar__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="RestoranYonetimDBModel.FK__SiparisUr__UrunI__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="RestoranYonetimDBModel.FK_Siparisler_Masalar" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
