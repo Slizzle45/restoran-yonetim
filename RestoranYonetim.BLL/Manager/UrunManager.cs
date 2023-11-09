@@ -47,7 +47,6 @@ namespace RestoranYonetim.BLL.Manager
                 urunler.Fiyat = fiyat;
                 urunler.Aciklama = aciklama;
 
-                int sonuc2;//todo siparisurunmanager
                 int sonuc = repository.Kaydet(urunler);
                 if(sonuc > 0)
                     return "Kayıt Başarılı";

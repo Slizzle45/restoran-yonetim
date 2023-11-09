@@ -15,11 +15,11 @@ namespace RestoranYonetim
     public partial class FormSiparisAl : Form
     {
         Masalar secilenMasa = new Masalar();
-        int urunID;
 
         UrunManager urunManager = new UrunManager();
+        SiparisManager siparisManager = new SiparisManager();
         Urunler secilenUrun = new Urunler();
-
+        Siparisler siparis = new Siparisler();
         //public FormSiparisAl()
         //{
         //    InitializeComponent();
@@ -33,14 +33,31 @@ namespace RestoranYonetim
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            secilenUrun.UrunAdi = comboBox1.SelectedValue.ToString();
+            secilenUrun.UrunAdi = comboBox1.SelectedItem.ToString();
             secilenUrun = urunManager.Bul(secilenUrun.UrunAdi);
         }
 
         private void FormSiparisAl_Load(object sender, EventArgs e)
         {
-            comboBox1.DataSource = urunManager.UrunListesi();
+            var urunListesi = urunManager.UrunListesi();
+
+            foreach(var urun in urunListesi)
+            {
+                comboBox1.Items.Add(urun.UrunAdi);
+            }
             toolStripStatusLabel1.Text += secilenMasa.MasaAdi;
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)//sipariş ekle
+        {
+            MessageBox.Show(siparisManager.Kaydet(DateTime.Now, siparis.ToplamFiyat, secilenMasa.MasaID));
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)//ürün ekle
+        {
+            siparis.MasaID = secilenMasa.MasaID;
+            siparis.ToplamFiyat += secilenUrun.Fiyat;
         }
     }
 }

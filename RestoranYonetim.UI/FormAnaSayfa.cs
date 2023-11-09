@@ -73,8 +73,16 @@ namespace RestoranYonetim
         private void MasaVeriGoster()
         {
             dataGridView1.Columns.Clear();
-            dataGridView1.DataSource = masaManager.MasaListesi();
-            
+            SiparisManager siparisManager = new SiparisManager();
+            var siparis = siparisManager.Bul(secilenMasa.MasaID);
+            List<Siparisler> listSiparis = new List<Siparisler>();
+            foreach (var item in siparisManager.SiparisListesi())
+            {
+                if(item.MasaID==secilenMasa.MasaID)
+                    listSiparis.Add(item);
+            }
+            dataGridView1.DataSource = listSiparis;
+
         }
 
         private void tsUrunler_Click(object sender, EventArgs e)
