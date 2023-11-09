@@ -25,7 +25,7 @@ namespace RestoranYonetim.BLL.Manager
             return repository.BulQuery(x => x.MasaAdi == masaAdi).FirstOrDefault();
         }
 
-        public string Guncelle(int masaId, string masaAdi, int kapasite, string durum)
+        public string Guncelle(int masaID, string masaAdi, int kapasite, string durum)
         {
             throw new NotImplementedException();
         }

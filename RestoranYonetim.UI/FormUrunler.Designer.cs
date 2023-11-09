@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridViewUrunler = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunler)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridViewUrunler
-            // 
-            this.dataGridViewUrunler.AllowUserToOrderColumns = true;
-            this.dataGridViewUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUrunler.Location = new System.Drawing.Point(13, 13);
-            this.dataGridViewUrunler.Name = "dataGridViewUrunler";
-            this.dataGridViewUrunler.Size = new System.Drawing.Size(775, 361);
-            this.dataGridViewUrunler.TabIndex = 0;
             // 
             // button1
             // 
@@ -52,23 +43,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(775, 375);
+            this.dataGridView1.TabIndex = 2;
+            // 
             // FormUrunler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridViewUrunler);
             this.Name = "FormUrunler";
             this.Text = "FormUrunler";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunler)).EndInit();
+            this.Load += new System.EventHandler(this.FormUrunler_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridViewUrunler;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -71,7 +71,6 @@
           <Property Name="UrunAdi" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Fiyat" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Aciklama" Type="nvarchar" MaxLength="255" />
-          <Property Name="Resim" Type="nvarchar(max)" />
         </EntityType>
         <Association Name="FK__SiparisUr__Sipar__5070F446">
           <End Role="Siparisler" Type="Self.Siparisler" Multiplicity="0..1" />
@@ -237,7 +236,7 @@
           </Key>
           <Property Name="SiparislerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SiparisTarihi" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="ToplamFiyat" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ToplamFiyat" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Odemeler" Relationship="Self.FK_Odemeler_Siparisler" FromRole="Siparisler" ToRole="Odemeler" />
           <NavigationProperty Name="SiparisUrun" Relationship="Self.FK__SiparisUr__Sipar__5070F446" FromRole="Siparisler" ToRole="SiparisUrun" />
           <Property Name="MasaID" Type="Int32" Nullable="false" />
@@ -271,9 +270,8 @@
           <Property Name="UrunlerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Kategori" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="UrunAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Fiyat" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Fiyat" Type="Int32" Nullable="false" />
           <Property Name="Aciklama" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SiparisUrun" Relationship="Self.FK__SiparisUr__UrunI__5165187F" FromRole="Urunler" ToRole="SiparisUrun" />
         </EntityType>
         <Association Name="FK_Rezervasyonlar_Masalar">
@@ -491,7 +489,6 @@
                 <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
                 <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
                 <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
-                <ScalarProperty Name="Resim" ColumnName="Resim" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

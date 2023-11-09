@@ -33,7 +33,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnSatirSil = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnHesapGuncelle = new System.Windows.Forms.Button();
             this.btnHesapKes = new System.Windows.Forms.Button();
             this.btnSiparisEkle = new System.Windows.Forms.Button();
@@ -49,6 +49,7 @@
             this.labelefe = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +77,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnSatirSil);
+            this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.btnHesapGuncelle);
             this.groupBox2.Controls.Add(this.btnHesapKes);
             this.groupBox2.Location = new System.Drawing.Point(13, 296);
@@ -86,14 +87,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Masa Özeti";
             // 
-            // btnSatirSil
+            // dataGridView1
             // 
-            this.btnSatirSil.Location = new System.Drawing.Point(839, 19);
-            this.btnSatirSil.Name = "btnSatirSil";
-            this.btnSatirSil.Size = new System.Drawing.Size(136, 56);
-            this.btnSatirSil.TabIndex = 4;
-            this.btnSatirSil.Text = "Satır Sil";
-            this.btnSatirSil.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 20);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(814, 385);
+            this.dataGridView1.TabIndex = 5;
             // 
             // btnHesapGuncelle
             // 
@@ -238,6 +239,7 @@
             this.Load += new System.EventHandler(this.FormAnaSayfa_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -253,7 +255,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnSiparisEkle;
         private System.Windows.Forms.Button btnSiparisSil;
-        private System.Windows.Forms.Button btnSatirSil;
         private System.Windows.Forms.Button btnHesapGuncelle;
         private System.Windows.Forms.Button btnHesapKes;
         private System.Windows.Forms.Button btnMasaEkle;
@@ -265,5 +266,6 @@
         private System.Windows.Forms.Button btnMasaRezerveKaldir;
         private System.Windows.Forms.Button btnPasif;
         private System.Windows.Forms.Label labelefe;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

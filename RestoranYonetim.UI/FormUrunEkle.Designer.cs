@@ -34,12 +34,11 @@
             this.tbAciklama = new System.Windows.Forms.TextBox();
             this.tbUrunAdi = new System.Windows.Forms.TextBox();
             this.tbFiyat = new System.Windows.Forms.TextBox();
-            this.cbKategori = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnKapat = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
+            this.cbKategori = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,11 +62,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbKategori);
             this.groupBox1.Controls.Add(this.tbAciklama);
             this.groupBox1.Controls.Add(this.tbUrunAdi);
             this.groupBox1.Controls.Add(this.tbFiyat);
-            this.groupBox1.Controls.Add(this.cbKategori);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
@@ -102,24 +100,6 @@
             this.tbFiyat.Name = "tbFiyat";
             this.tbFiyat.Size = new System.Drawing.Size(243, 20);
             this.tbFiyat.TabIndex = 6;
-            // 
-            // cbKategori
-            // 
-            this.cbKategori.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbKategori.FormattingEnabled = true;
-            this.cbKategori.Location = new System.Drawing.Point(98, 108);
-            this.cbKategori.Name = "cbKategori";
-            this.cbKategori.Size = new System.Drawing.Size(243, 21);
-            this.cbKategori.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(391, 182);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Resim";
             // 
             // label4
             // 
@@ -158,6 +138,15 @@
             this.btnEkle.TabIndex = 4;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
+            // 
+            // cbKategori
+            // 
+            this.cbKategori.FormattingEnabled = true;
+            this.cbKategori.Location = new System.Drawing.Point(98, 108);
+            this.cbKategori.Name = "cbKategori";
+            this.cbKategori.Size = new System.Drawing.Size(243, 21);
+            this.cbKategori.TabIndex = 9;
             // 
             // FormUrunEkle
             // 
@@ -170,6 +159,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FormUrunEkle";
             this.Text = "FormUrunEkle";
+            this.Load += new System.EventHandler(this.FormUrunEkle_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -183,12 +173,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tbUrunAdi;
         private System.Windows.Forms.TextBox tbFiyat;
-        private System.Windows.Forms.ComboBox cbKategori;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbAciklama;
         private System.Windows.Forms.Button btnKapat;
         private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.ComboBox cbKategori;
     }
 }

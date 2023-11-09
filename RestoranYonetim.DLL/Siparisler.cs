@@ -23,7 +23,7 @@ namespace RestoranYonetim.DLL
     
         public int SiparislerID { get; set; }
         public System.DateTime SiparisTarihi { get; set; }
-        public decimal ToplamFiyat { get; set; }
+        public int ToplamFiyat { get; set; }
         public int MasaID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

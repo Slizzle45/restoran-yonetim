@@ -33,12 +33,11 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
             this.dataGridViewUrunDetay = new System.Windows.Forms.DataGridView();
             this.btnSatirSil = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunDetay)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,31 +79,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(68, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Ürün Adı";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(15, 26);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(773, 157);
-            this.flowLayoutPanel1.TabIndex = 4;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button3.AutoSize = true;
-            this.button3.Location = new System.Drawing.Point(3, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Yemek1";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.label1.Text = "Ürün Seçiniz";
             // 
             // dataGridViewUrunDetay
             // 
@@ -123,25 +102,43 @@
             this.btnSatirSil.Text = "Satır Sil";
             this.btnSatirSil.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(175, 38);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(271, 21);
+            this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(610, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "EKLE";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FormSiparisAl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(800, 556);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnSatirSil);
             this.Controls.Add(this.dataGridViewUrunDetay);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.btnEkle);
             this.Name = "FormSiparisAl";
             this.Text = "FormSiparisAl";
+            this.Load += new System.EventHandler(this.FormSiparisAl_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunDetay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,9 +152,9 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridViewUrunDetay;
         private System.Windows.Forms.Button btnSatirSil;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

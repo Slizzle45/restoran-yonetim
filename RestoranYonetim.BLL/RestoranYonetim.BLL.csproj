@@ -51,6 +51,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Interface\IMasa.cs" />
     <Compile Include="Manager\MasaManager.cs" />
+    <Compile Include="Manager\UrunManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -66,10 +66,16 @@ namespace RestoranYonetim
             secilenButon = (Button)sender;
             secilenMasa = masaManager.Bul(secilenButon.Text);
             labelefe.Text = secilenMasa.MasaAdi;
-            
-            
+            MasaVeriGoster();
+
         }
 
+        private void MasaVeriGoster()
+        {
+            dataGridView1.Columns.Clear();
+            dataGridView1.DataSource = masaManager.MasaListesi();
+            
+        }
 
         private void tsUrunler_Click(object sender, EventArgs e)
         {
@@ -79,7 +85,7 @@ namespace RestoranYonetim
 
         private void btnSiparisEkle_Click(object sender, EventArgs e)
         {
-            FormSiparisAl frmSiparis = new FormSiparisAl();
+            FormSiparisAl frmSiparis = new FormSiparisAl(secilenMasa);
             frmSiparis.Show();
         }
 
