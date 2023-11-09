@@ -34,7 +34,6 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnHesapGuncelle = new System.Windows.Forms.Button();
             this.btnHesapKes = new System.Windows.Forms.Button();
             this.btnSiparisEkle = new System.Windows.Forms.Button();
             this.btnSiparisSil = new System.Windows.Forms.Button();
@@ -78,7 +77,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.btnHesapGuncelle);
             this.groupBox2.Controls.Add(this.btnHesapKes);
             this.groupBox2.Location = new System.Drawing.Point(13, 296);
             this.groupBox2.Name = "groupBox2";
@@ -95,15 +93,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(814, 385);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // btnHesapGuncelle
-            // 
-            this.btnHesapGuncelle.Location = new System.Drawing.Point(839, 265);
-            this.btnHesapGuncelle.Name = "btnHesapGuncelle";
-            this.btnHesapGuncelle.Size = new System.Drawing.Size(480, 56);
-            this.btnHesapGuncelle.TabIndex = 3;
-            this.btnHesapGuncelle.Text = "Hesap Güncelle";
-            this.btnHesapGuncelle.UseVisualStyleBackColor = true;
             // 
             // btnHesapKes
             // 
@@ -213,9 +202,8 @@
             this.labelefe.AutoSize = true;
             this.labelefe.Location = new System.Drawing.Point(1197, 216);
             this.labelefe.Name = "labelefe";
-            this.labelefe.Size = new System.Drawing.Size(45, 13);
+            this.labelefe.Size = new System.Drawing.Size(0, 13);
             this.labelefe.TabIndex = 13;
-            this.labelefe.Text = "deneme";
             // 
             // FormAnaSayfa
             // 
@@ -255,7 +243,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnSiparisEkle;
         private System.Windows.Forms.Button btnSiparisSil;
-        private System.Windows.Forms.Button btnHesapGuncelle;
         private System.Windows.Forms.Button btnHesapKes;
         private System.Windows.Forms.Button btnMasaEkle;
         private System.Windows.Forms.Button btnMasaSil;

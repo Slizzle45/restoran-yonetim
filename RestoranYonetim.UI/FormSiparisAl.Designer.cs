@@ -60,6 +60,7 @@
             this.btnKapat.TabIndex = 1;
             this.btnKapat.Text = "Kapat";
             this.btnKapat.UseVisualStyleBackColor = true;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // statusStrip1
             // 
@@ -93,6 +94,7 @@
             this.dataGridViewUrunDetay.Name = "dataGridViewUrunDetay";
             this.dataGridViewUrunDetay.Size = new System.Drawing.Size(774, 254);
             this.dataGridViewUrunDetay.TabIndex = 5;
+            this.dataGridViewUrunDetay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUrunDetay_CellClick);
             // 
             // btnSatirSil
             // 
@@ -102,6 +104,7 @@
             this.btnSatirSil.TabIndex = 6;
             this.btnSatirSil.Text = "Satır Sil";
             this.btnSatirSil.UseVisualStyleBackColor = true;
+            this.btnSatirSil.Click += new System.EventHandler(this.btnSatirSil_Click);
             // 
             // comboBox1
             // 
