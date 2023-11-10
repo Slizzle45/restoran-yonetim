@@ -23,7 +23,7 @@ namespace RestoranYonetim.BLL.Manager
 
         public Rezervasyonlar Bul(int masaID)
         {
-            throw new NotImplementedException();
+            return repository.BulQuery(x=>x.MasaID == masaID).FirstOrDefault();
         }
 
         public string Guncelle(int rezervasyonID, int masaID, DateTime rezervasyonTarihi, int rezervasyonSaatAraligi, int kisiSayisi)
@@ -78,11 +78,11 @@ namespace RestoranYonetim.BLL.Manager
 
         }
 
-        public string Sil(int rezervasyonID)
+        public string Sil(int masaID)
         {
             try
             {
-                var pasifData = repository.BulQuery(r => r.RezervasyonID == rezervasyonID).FirstOrDefault();
+                var pasifData = repository.BulQuery(r => r.MasaID == masaID).FirstOrDefault();
                 if(pasifData == null)
                     return "Rezervasyon bulunamadı, lütfen kontrol ediniz";
 
@@ -113,6 +113,29 @@ namespace RestoranYonetim.BLL.Manager
                 return true; //çakışma var
 
             return false; //çakışma yok
+        }
+
+        /// <summary>
+        /// Rezervasyon tarihinin geçerli olup olmadığını kontrol eder.
+        /// </summary>
+        /// <param name="tarih"></param>
+        /// <param name="saat"></param>
+        /// <returns></returns>
+        public bool TarihGecmisMi(DateTime tarih, int saat)
+        {
+            if (DateTime.Now == tarih)
+            {
+                if (DateTime.Now.Hour >= saat)
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

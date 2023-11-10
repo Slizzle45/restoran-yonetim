@@ -1,6 +1,7 @@
 ﻿using RestoranYonetim.BLL.Manager;
 using RestoranYonetim.DLL;
 using RestoranYonetim.DLL.Repositories;
+using RestoranYonetim.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,8 @@ namespace RestoranYonetim
     public partial class FormAnaSayfa : Form
     {
         MasaManager masaManager = new MasaManager();
+        RezervasyonManager rezervasyonManager = new RezervasyonManager();
+
         Button secilenButon = new Button();
         Masalar secilenMasa = new Masalar();
 
@@ -50,8 +53,21 @@ namespace RestoranYonetim
                 if(masa.Durum.Equals("pasif") || masa.Durum.Equals("Pasif"))
                     button.BackColor = Color.DarkRed;
                 if(masa.Durum.Equals("rezerve") || masa.Durum.Equals("Rezerve"))
-                    button.BackColor = Color.DarkCyan;
+                {
+                    Rezervasyonlar rez = new Rezervasyonlar();
+                    rez = rezervasyonManager.Bul(masa.MasaID);
 
+                    if (rezervasyonManager.TarihGecmisMi(rez.RezervasyonTarihi, rez.RezervasyonSaatAraligi))
+                    {
+                        masa.Durum = "aktif";
+                    }
+                    else
+                    {
+                        button.BackColor = Color.DarkCyan;
+                    }
+
+                    
+                }
                 flowLayoutPanel1.Controls.Add(button);
             }
 
@@ -110,6 +126,31 @@ namespace RestoranYonetim
             MessageBox.Show(masaManager.Sil(secilenMasa.MasaID));
             
             flowLayoutPanel1_Load("child", e);
+        }
+
+        private void btnMasaRezerve_Click(object sender, EventArgs e)
+        {
+            if (secilenButon != null)
+            {
+                secilenButon.BackColor = Color.DarkCyan;
+                FormRezervasyon frmRezervasyon = new FormRezervasyon(secilenMasa);
+                frmRezervasyon.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen rezerve etmek istediğiniz masayı seçiniz");
+            }
+
+        }
+
+        private void btnMasaRezerveKaldir_Click(object sender, EventArgs e)
+        {
+            if (secilenButon != null)
+            {
+                rezervasyonManager.Sil(secilenMasa.MasaID);
+                secilenButon.BackColor = Color.Empty;
+                secilenMasa.Durum = "aktif";
+            }
         }
     }
 }

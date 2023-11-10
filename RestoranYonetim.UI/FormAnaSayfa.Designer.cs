@@ -178,6 +178,7 @@
             this.btnMasaRezerve.TabIndex = 10;
             this.btnMasaRezerve.Text = "Masa Rezerve";
             this.btnMasaRezerve.UseVisualStyleBackColor = true;
+            this.btnMasaRezerve.Click += new System.EventHandler(this.btnMasaRezerve_Click);
             // 
             // btnMasaRezerveKaldir
             // 
@@ -187,6 +188,7 @@
             this.btnMasaRezerveKaldir.TabIndex = 11;
             this.btnMasaRezerveKaldir.Text = "Rezervasyon Kaldır";
             this.btnMasaRezerveKaldir.UseVisualStyleBackColor = true;
+            this.btnMasaRezerveKaldir.Click += new System.EventHandler(this.btnMasaRezerveKaldir_Click);
             // 
             // btnPasif
             // 

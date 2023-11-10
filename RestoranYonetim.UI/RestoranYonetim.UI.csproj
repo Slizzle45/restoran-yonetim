@@ -65,6 +65,12 @@
     <Compile Include="FormMasaEkle.Designer.cs">
       <DependentUpon>FormMasaEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRezervasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRezervasyon.Designer.cs">
+      <DependentUpon>FormRezervasyon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSiparisAl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMasaEkle.resx">
       <DependentUpon>FormMasaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRezervasyon.resx">
+      <DependentUpon>FormRezervasyon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSiparisAl.resx">
       <DependentUpon>FormSiparisAl.cs</DependentUpon>
